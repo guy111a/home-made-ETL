@@ -17,5 +17,5 @@ using pytho3 and a bit of scala, i created the following ETL
 2. kafka is moving the data in the topic
 3. data consumer, python script that is listening to the kafka topic, accepting the data, adding the current time stamp of the event and pushing the combined information into the hive database
 4. hive, in a partitioned table is storing the information according to the correct partition ( based upon the size )
-5. anther python script is reading the data that is stored in the hive table, and saving the information that is newer since last time in another location in HDFS in parquet files.
+5. anther python script is reading the data that is stored in the hive table, and saving the information that is newer since last time in another location in HDFS in parquet files. ( emmulating S3 bucket storage )
 6. lastly, a spark-submit job is running to manipulate / enhance the information in the hive tables. showing several interesting things in the data that is collected.
